@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CCQ | Countdown Challenge Quiz</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Basics of JavaScript Quiz</h1>
+        <h2>You will be given a 6 question multiple choice quiz and will have 60 seconds to answer them, Any wrong answers will subtract 15 seconds from the countdown timer  </h2>
+        <h2 class="start">
+            <button id="startButton">Start Quiz</button>
+        </h2>
+        <h4 id="timer">Time left: 60 seconds</h4>
+        <p id="score"></p>
+    </header>
+
+    <div class="container" id="q1"style="display: none;" >
+        <div class="questionsection"  >
+            <p class="questions">
+            <h3>What is the correct way to declare a variable in JavaScript?</h3>
+            <ul class="options" id="first-choices">
+                <li><button>a) var myVariable = 10</button></li>
+                <li><button>b) let myVariable = 10</button></li>
+                <li><button>c) const myVariable = 10</button></li>
+                <li><button>d) All of the above</button></li>
+            </ul>
+            </p>
+        </div>
+    </div>
+    <div class="container" id="q2"style="display: none;" >
+        <div class="questionsection" >
+            <p class="questions">
+            <h3> How many elements can you apply an 'ID' attribute to?</h3>
+            <ul class="options" id="second-choices">
+                <li><button>a) 128</button></li>
+                <li><button>b) 105</button></li>
+                <li><button>c) 1080 + 5</button></li>
+                <li><button>d) 1</button></li>
+            </ul>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="./assets/script.js"></script>
+
+</html>
