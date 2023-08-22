@@ -158,8 +158,8 @@ sixthChoicesSections.addEventListener("click", (e) => {
     console.log(event.target)
      // var currentQuestion = questions[currentQuestionIndex];
      // var selectedAnswer = document.querySelector('input[name="answer"]:checked');
-      if (currentQuestionIndex < 5) {
-         currentQuestionIndex++; // Increment after checking the answer
+      if (currentQuestionIndex < 6) {
+         currentQuestionIndex++; 
          displayQuestion(currentQuestionIndex);
        } else {
         clearInterval(timerInterval);
