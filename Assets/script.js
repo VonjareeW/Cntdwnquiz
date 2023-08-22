@@ -27,30 +27,30 @@ var question2Element = document.getElementById('q2');
 var question3Element = document.getElementById('q3');
 var question4Element = document.getElementById('q4');
 var question5Element = document.getElementById('q5');
-var question6Element = document.getElementById('q6');
+
 
 var firstChoicesSections = document.getElementById("first-choices")
 var secondChoicesSections = document.getElementById("second-choices")
 var thirdChoicesSections = document.getElementById("third-choices")
 var fourthChoicesSections = document.getElementById("fourth-choices")
 var fifthChoicesSections = document.getElementById("fifth-choices")
-var sixthChoicesSections = document.getElementById("sixth-choices")
+
 
 function handleIncorrectAnswer(selectedChoice) {
   const correctOptions = [
-    "d) ",
-    "b) ",
-    "d) ",
-    "a) ",
-    "c) ",
-    "d) ",
-
+    
+    "d) Document Object Model",
+    "a) 1",
+    "a) Cascading Style Sheets",
+    "c) Script",
+    "d) CSS",
+    
   ];
 
 
   if (!correctOptions.includes(selectedChoice)) {
-    timeLeft -= 15;
-    score -=15;
+    timeLeft -= 5;
+    score -=20;
     updateTimer();
     alert('Incorrect ');
   }
@@ -64,7 +64,7 @@ function displayQuestion(questionNumber) {
   question3Element.style.display = 'none';
   question4Element.style.display = 'none';
   question5Element.style.display = 'none';
-  question6Element.style.display = 'none';
+  
 
   if (questionNumber == 0) {
     question1Element.style.display = 'flex';
@@ -76,8 +76,7 @@ function displayQuestion(questionNumber) {
     question4Element.style.display = 'flex';
   } else if (questionNumber == 4) {
     question5Element.style.display = 'flex';
-  } else if (questionNumber == 5) {
-    question6Element.style.display = 'flex';
+  }
 }
   
 var timerInterval;
@@ -93,7 +92,7 @@ secondChoicesSections.addEventListener("click", (e)=> {handleSelection(e)})
 thirdChoicesSections.addEventListener("click", (e)=> {handleSelection(e)})
 fourthChoicesSections.addEventListener("click", (e)=> {handleSelection(e)})
 fifthChoicesSections.addEventListener("click", (e)=> {handleSelection(e)})
-sixthChoicesSections.addEventListener("click", (e)=> {handleSelection(e)})
+
 
 firstChoicesSections.addEventListener("click", (e) => {
   const selectedChoice = e.target.textContent;
@@ -116,10 +115,6 @@ fifthChoicesSections.addEventListener("click", (e) => {
   handleIncorrectAnswer(selectedChoice);
 });
 
-sixthChoicesSections.addEventListener("click", (e) => {
-  const selectedChoice = e.target.textContent;
-  handleIncorrectAnswer(selectedChoice);
-});
 
 
 
@@ -156,9 +151,8 @@ sixthChoicesSections.addEventListener("click", (e) => {
   function handleSelection(event) {
     console.log(currentQuestionIndex)
     console.log(event.target)
-     // var currentQuestion = questions[currentQuestionIndex];
-     // var selectedAnswer = document.querySelector('input[name="answer"]:checked');
-      if (currentQuestionIndex < 6) {
+     ;
+      if (currentQuestionIndex < 4) {
          currentQuestionIndex++; 
          displayQuestion(currentQuestionIndex);
        } else {
@@ -167,5 +161,4 @@ sixthChoicesSections.addEventListener("click", (e) => {
         calculateScore();
         location.reload();
        }
-      }
-}
+    }
