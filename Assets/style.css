@@ -41,7 +41,7 @@ header {
   }
 
   #timer {
-    display: inline-block;
+    display: left;
     border-radius: 8px;
     padding: 7px;
     background-color: red;
